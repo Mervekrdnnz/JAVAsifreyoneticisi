@@ -1,68 +1,85 @@
 # 🔐 Java Şifre Yöneticisi (Password Manager)
 
-Bu proje, **Java** dili kullanılarak geliştirilmiş, **AES-256 şifreleme algoritması** ile güvenli veri saklama sağlayan **terminal tabanlı bir şifre yöneticisi** uygulamasıdır.
+Bu proje, Java programlama dili kullanılarak geliştirilmiş, **kullanıcıların şifrelerini güvenli bir şekilde oluşturmasını, saklamasını ve yönetmesini** sağlayan **konsol tabanlı (CLI) bir şifre yöneticisi uygulamasıdır**.
 
-Amaç; kullanıcıların şifrelerini güvenli bir şekilde oluşturmasını, saklamasını ve yönetmesini sağlamaktır.
+Amaç; şifre güvenliği, dosya işlemleri ve temel kriptografi mantığını bir arada kullanarak **gerçek hayata yakın bir güvenlik uygulaması geliştirmektir**.
+
+---
+
+## 🎯 Projenin Amacı
+
+- Kullanıcı şifrelerini **düz metin (plain text) olarak saklamamak**
+- Güçlü şifreleme algoritmaları ile verileri korumak
+- Java ile **güvenlik odaklı** bir uygulama geliştirmek
+- Dosya okuma/yazma, algoritma ve kullanıcı etkileşimini birlikte kullanmak
 
 ---
 
 ## 🚀 Özellikler
 
-- 🔒 **AES-256 ile Güçlü Şifreleme**
-- 🧠 **Rastgele ve Güçlü Şifre Üretimi**
-- 💾 **Dosya Tabanlı Güvenli Veri Saklama**
-- 🖥️ **Terminal (CLI) Üzerinden Kullanım**
-- 🗂️ **Modüler ve OOP uyumlu yapı**
+- 🔐 **AES tabanlı şifreleme**
+- 🔑 **Rastgele ve güçlü şifre üretimi**
+- 💾 **Dosya tabanlı veri saklama**
+- 🧠 **Basit ve anlaşılır CLI (Command Line Interface)**
+- 📂 Şifre ekleme, listeleme ve yönetme
+- 🛡️ Kullanıcı verilerinin şifreli biçimde saklanması
 
 ---
 
 ## 🛠️ Kullanılan Teknolojiler
 
 - **Java**
-- **AES-256 Encryption**
-- **Object Oriented Programming (OOP)**
-- **File I/O**
-- **CLI (Command Line Interface)**
+- **AES Şifreleme Algoritması**
+- **Dosya I/O (FileReader / FileWriter)**
+- **Nesne Yönelimli Programlama (OOP)**
+- **CLI (Konsol Uygulaması)**
 
 ---
 
 ## 📁 Proje Yapısı
 
-```text
 JAVAsifreyoneticisi/
 │
-├── Main.java                  → Uygulama giriş noktası
-├── EncryptionService.java     → AES-256 şifreleme/çözme işlemleri
-├── FileManager.java           → Dosya okuma & yazma işlemleri
-├── PasswordEntry.java         → Şifre veri modeli
-├── PasswordGenerator.java    → Güçlü şifre üretici
-│
-├── kasa.txt
-├── database.safe
-├── kasa_verisi.safe           → Şifrelenmiş veri dosyaları
-⚙️ Nasıl Çalışır?
-Kullanıcı uygulamayı terminal üzerinden çalıştırır
+├── Main.java → Uygulamanın giriş noktası
+├── PasswordEntry.java → Şifre veri modeli
+├── EncryptionService.java → Şifreleme ve çözme işlemleri
+├── PasswordGenerator.java → Güçlü şifre üretimi
+├── FileManager.java → Dosya okuma ve yazma işlemleri
+├── kasa.txt / database.safe → Şifreli veri dosyası
 
-Şifre ekleme / görüntüleme işlemleri yapılır
 
-Tüm veriler AES-256 ile şifrelenerek dosyaya kaydedilir
+---
 
-Yetkisiz erişimlere karşı veriler okunamaz durumda saklanır
+## ▶️ Nasıl Çalıştırılır?
 
-▶️ Çalıştırma
+1. Bilgisayarınızda **Java 8 veya üzeri** kurulu olmalıdır.
+2. Projeyi klonlayın:
+   ```bash
+   git clone https://github.com/Mervekrdnnz/JAVAsifreyoneticisi.git
+Proje klasörüne girin:
+
+cd JAVAsifreyoneticisi
+Derleyin ve çalıştırın:
+
 javac Main.java
 java Main
-Java 8 veya üzeri önerilir.
+Program terminal üzerinden çalışır ve sizi yönlendirir.
 
-🎯 Proje Amacı
-Bu proje;
+🔒 Güvenlik Yaklaşımı
+Şifreler AES algoritması ile şifrelenerek saklanır.
 
-Java OOP mantığını uygulamak
+Dosya içinde hiçbir şifre açık metin olarak tutulmaz.
 
-Kriptografi ve veri güvenliği kavramlarını öğrenmek
+Şifre üretimi sırasında karmaşık ve tahmin edilmesi zor karakterler kullanılır.
 
-Dosya yönetimi ve modüler yazılım geliştirmek
+📈 Geliştirme Fikirleri (Roadmap)
+🔑 Master Password eklenmesi
 
-GitHub portföyü için güçlü bir örnek oluşturmak
+🔒 Hash + Salt kullanımı
 
-amacıyla geliştirilmiştir.
+🧪 JUnit testlerinin eklenmesi
+
+🖥️ GUI (JavaFX / Swing) arayüzü
+
+☁️ Veritabanı entegrasyonu
+
